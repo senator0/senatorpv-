@@ -1,10 +1,10 @@
 <?php
 /**
- * Created by @OnyxTM.
- * @CH_PM @CH_PM_BOT
- * User: Morteza Bagher Telegram id : @mench
- * Date: 11/12/2016
- * Time: 09:19 PM
+ * Created by @Lv_t_m.
+ * @Senator_tea @senatorpmbot
+ * User: senator Bagher Telegram id : @Lv_t_m
+ * Date: 30/1/2017
+ * Time: 20:50 PM
  */
 
 
@@ -12,9 +12,9 @@
 include "config.php";
 
 
-define('API_KEY','توکن ربات');
-$admin = "آیدی عددی ادمین";
-$channeluse = "-1001086770485";
+define('API_KEY','295151982:AAFKF3Kc-ArFwdbL-JZPGuugv9ddWu6NK6o');
+$admin = "170146015,204507468";
+$channeluse = "-1073119182";
 
 $update = json_decode(file_get_contents('php://input'));
 $txt = $update->message->text;
@@ -107,8 +107,8 @@ if ($token->ok == true) {
 
         token($txt, "sendMessage", [
             'chat_id' => $chat_id,
-            'text' => "ربات شما با موفقیت به سرور های @CH_PMRESAN_BOT متصل شد
-            @ch_jockdoni"
+            'text' => "ربات شما با موفقیت به سرور های @senatorpmbot متصل شد
+            @Lv_t_m"
         ]);
         apiRequest("sendMessage", [
             'chat_id' => $chat_id,
@@ -157,7 +157,7 @@ if ($token->ok == true) {
     $mysqli->query("INSERT INTO uploadtext (id, text) VALUES ($ids,'$tttext')");
     bridge("sendMessage",[
         'chat_id'=>$chat_id,
-        'text'=>"@ch_pm_bot ".$ids,
+        'text'=>"@senatorpmbot ".$ids,
         'parse_mode'=>'HTML',
         'reply_markup'=>json_encode(['inline_keyboard'=>[
             [['text'=>'ارسال برای دیگران',"switch_inline_query"=>"$ids"]]
@@ -236,10 +236,10 @@ if ($token->ok == true) {
 
 برای ثبت کردن تخلف یوزر نیم ربات را پس از دستور /takhalof  وارد کنید
 مانند:
-/takhalof @menchpmbot
+/takhalof @senatorpmbot
 و یا آیدی ربات را وارد کنید برای دریافت آیدی ربات به ربات دستور /id را ارسال کنید😉",
         'reply_markup' => json_encode(['inline_keyboard' => [
-            [['text' => 'کانال اطلاع رسانی', 'url' => "https://t.me/joinchat/AAAAAD7GSGnI_QyAB3RtwQ"]]
+            [['text' => 'کانال اطلاع رسانی', 'url' => "https://telegram.me/joinchat/CiQ43z_2f84cqX3oWxDJng"]]
         ]])
     ]);
 } else {
@@ -247,7 +247,7 @@ if ($token->ok == true) {
         'chat_id' => $chat_id,
         'text' => "متاسفانه چیزی پیدا نکردم☹️",
         'reply_markup' => json_encode(['inline_keyboard' => [
-            [['text' => 'کانال اطلاع رسانی', 'url' => "https://t.me/joinchat/AAAAAD7GSGnI_QyAB3RtwQ"]]
+            [['text' => 'کانال اطلاع رسانی', 'url' => "https://telegram.me/joinchat/CiQ43z_2f84cqX3oWxDJng"]]
         ]])
     ]);
 }
@@ -288,7 +288,7 @@ while ($row = $res->fetch_assoc()){
                 'type' => 'article',
                 'id' => base64_encode(rand(5,555)),
                 'title' => 'اشتراک کد',
-                'input_message_content' => ['parse_mode' => 'HTML', 'message_text' => "@ch_pm_bot $idq"],
+                'input_message_content' => ['parse_mode' => 'HTML', 'message_text' => "@senatorpmbot $idq"],
                 'reply_markup' => [
                     'inline_keyboard' => [
                         [
@@ -306,8 +306,8 @@ while ($row = $res->fetch_assoc()){
                 'id' => base64_encode(rand(5,555)),
                 'title' => 'چیزی یافت نشد.',
                 'input_message_content' => ['parse_mode' => 'HTML', 'message_text' => "چیزی یافت نشد.
-                @CH_PM_BOT
-                @CH_PM"]
+                @senatorpmbot
+                @Senator_tea"]
             ]])
         ]);
     }
